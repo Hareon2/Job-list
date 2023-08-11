@@ -10,7 +10,6 @@ export const removeFilter = (filters) => ({
   type: REMOVE_FILTER,
   filters,
 });
-export const clearFilter = (filters) => ({
+export const clearFilter = {
   type: CLEAR_FILTER,
-  filters,
-});
+};

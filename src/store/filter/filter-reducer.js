@@ -4,7 +4,10 @@ import { CLEAR_FILTER } from "./filter-actions";
 export const filterReducer = (state = [], action) => {
   switch (action.type) {
     case ADD_FILTER: {
-      return [...state, action.filters];
+      if (!state.includes(action.filters)) {
+        return [...state, action.filters];
+      }
+      return state;
     }
     case REMOVE_FILTER: {
       return state.filter((item) => item !== action.filters);

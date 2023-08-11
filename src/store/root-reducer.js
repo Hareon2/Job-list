@@ -5,5 +5,5 @@ import { filterReducer } from "./filter/filter-reducer";
 
 export const rootReducer = combineReducers({
   positions: positionReducer,
-  filter: filterReducer,
+  filters: filterReducer,
 });
